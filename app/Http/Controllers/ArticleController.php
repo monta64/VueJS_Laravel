@@ -13,7 +13,7 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::with('scategories')->get();
-        return $articles; 
+        return $articles;
     }
 
     /**
@@ -29,9 +29,9 @@ class ArticleController extends Controller
             'prix' => $request->input('prix'),
             'imageart' => $request->input('imageart'),
             'scategorieID' => $request->input('scategorieID')
-            ]);
-            $article->save();
-return response()->json($article,200);
+        ]);
+        $article->save();
+        return response()->json($article, 200);
     }
 
     /**
@@ -39,8 +39,8 @@ return response()->json($article,200);
      */
     public function show($id)
     {
-        $article= Article::find($id);
-return response()->json($article);
+        $article = Article::find($id);
+        return response()->json($article);
     }
 
     /**
@@ -50,7 +50,7 @@ return response()->json($article);
     {
         $article = Article::find($id);
         $article->update($request->all());
-        return response()->json($article,201);
+        return response()->json($article, 201);
     }
 
     /**
