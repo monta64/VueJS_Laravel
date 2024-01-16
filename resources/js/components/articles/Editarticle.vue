@@ -148,10 +148,10 @@ const serverOptions = () => {
         process: (fieldName, file, metadata, load, error, progress, abort) => {
             const data = new FormData();
             data.append('file', file);
-            data.append('upload_preset', 'GLID5IIT');
-            data.append('cloud_name', 'esps');
+            data.append('upload_preset', 'iit2024');
+            data.append('cloud_name', 'dkfgyjr47');
             data.append('public_id', file.name);
-            axios.post('https://api.cloudinary.com/v1_1/esps/upload', data)
+            axios.post('https://api.cloudinary.com/v1_1/dkfgyjr47/upload', data)
 
 
                 .then((response) => response.data)
